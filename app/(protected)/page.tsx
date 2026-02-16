@@ -31,7 +31,7 @@ export default function IndexPage() {
 
     return (
         <>
-            <div className="w-full h-screen flex flex-col">
+            <div className="md:w-full w-auto h-screen flex flex-col">
                 <div>
                     <Header label="Home" />
                 </div>

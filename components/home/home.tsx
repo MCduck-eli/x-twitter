@@ -16,7 +16,7 @@ export default function Header({ label, back }: homeProps) {
     };
 
     return (
-        <div className=" w-full flex flex-col">
+        <div className="w-full flex flex-col">
             <div className="flex flex-row items-center border-b border-neutral-500 gap-1 py-6 px-8">
                 <div className="cursor-pointer text-white">
                     {back && <FiArrowLeft size={25} onClick={backHendler} />}
