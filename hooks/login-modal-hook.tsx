@@ -31,7 +31,7 @@ export default function LoginModal() {
 
     const body = <LoginBody />;
     const footer = (
-        <div className="flex justify-center">
+        <div className="flex justify-center text-white">
             <p>
                 Have you?{" "}
                 <span
@@ -90,7 +90,7 @@ function LoginBody() {
     return (
         <>
             <div className="flex justify-center ">
-                <h1 className="text-2xl font-semibold">Login</h1>
+                <h1 className="text-2xl font-semibold text-white">Login</h1>
             </div>
             <Form {...form}>
                 {error && (
@@ -107,7 +107,7 @@ function LoginBody() {
                         control={form.control}
                         name="email"
                         render={({ field }) => (
-                            <FormItem className="mb-2 mt-5">
+                            <FormItem className="mb-2 mt-5 px-4">
                                 <FormControl>
                                     <Input placeholder="Email" {...field} />
                                 </FormControl>
@@ -119,7 +119,7 @@ function LoginBody() {
                         control={form.control}
                         name="password"
                         render={({ field }) => (
-                            <FormItem className="mb-5">
+                            <FormItem className="mb-5 px-4">
                                 <FormControl>
                                     <Input
                                         placeholder="Password"
@@ -131,14 +131,16 @@ function LoginBody() {
                             </FormItem>
                         )}
                     />
-                    <Button
-                        type="submit"
-                        disabled={isSubmitting}
-                        label={isSubmitting ? "Loading..." : "Next"}
-                        secondary
-                        onClick={form.handleSubmit(onSubmit)}
-                        fullWidth
-                    />
+                    <div className="px-4">
+                        <Button
+                            type="submit"
+                            disabled={isSubmitting}
+                            label={isSubmitting ? "Loading..." : "Next"}
+                            secondary
+                            onClick={form.handleSubmit(onSubmit)}
+                            fullWidth
+                        />
+                    </div>
                 </form>
             </Form>
         </>

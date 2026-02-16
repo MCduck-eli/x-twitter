@@ -41,7 +41,7 @@ export default function RegisterModal() {
         );
 
     const footer = (
-        <div className="flex justify-center">
+        <div className="flex justify-center text-white">
             <p>
                 Already have a?{" "}
                 <span
@@ -119,7 +119,7 @@ function RegisterStep1({
                     control={form.control}
                     name="email"
                     render={({ field }) => (
-                        <FormItem className="mb-2">
+                        <FormItem className="mb-2 px-4">
                             <FormControl>
                                 <Input placeholder="Email" {...field} />
                             </FormControl>
@@ -131,7 +131,7 @@ function RegisterStep1({
                     control={form.control}
                     name="name"
                     render={({ field }) => (
-                        <FormItem className="mb-5">
+                        <FormItem className="mb-5 px-4">
                             <FormControl>
                                 <Input placeholder="Name" {...field} />
                             </FormControl>
@@ -202,7 +202,7 @@ function RegisterStep2({ email, name }: { name: string; email: string }) {
                     control={form.control}
                     name="password"
                     render={({ field }) => (
-                        <FormItem className="mb-2">
+                        <FormItem className="mb-2 px-4">
                             <FormControl>
                                 <Input
                                     placeholder="Password"
@@ -218,7 +218,7 @@ function RegisterStep2({ email, name }: { name: string; email: string }) {
                     control={form.control}
                     name="username"
                     render={({ field }) => (
-                        <FormItem className="mb-5">
+                        <FormItem className="mb-5 px-4">
                             <FormControl>
                                 <Input placeholder="Username" {...field} />
                             </FormControl>
@@ -226,14 +226,16 @@ function RegisterStep2({ email, name }: { name: string; email: string }) {
                         </FormItem>
                     )}
                 />
-                <Button
-                    type="submit"
-                    disabled={isSubmitting}
-                    label={isSubmitting ? "Loading..." : "Next"}
-                    secondary
-                    onClick={form.handleSubmit(onSubmit)}
-                    fullWidth
-                />
+                <div className="mx-4">
+                    <Button
+                        type="submit"
+                        disabled={isSubmitting}
+                        label={isSubmitting ? "Loading..." : "Next"}
+                        secondary
+                        onClick={form.handleSubmit(onSubmit)}
+                        fullWidth
+                    />
+                </div>
             </form>
         </Form>
     );

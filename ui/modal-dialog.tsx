@@ -32,16 +32,16 @@ export default function Modal({
             >
                 <DialogHeader>
                     <div className="flex gap-10">
-                        <div className="cursor-pointer">
+                        <div className="cursor-pointer text-white">
                             <X onClick={onClose} />
                         </div>
                         {step && totalStep && (
-                            <div className="font-bold text-2xl">
+                            <div className="font-bold text-2xl text-white mt-5 mb-2">
                                 Step {step} of {totalStep}
                             </div>
                         )}
                     </div>
-                    {body && <div className="">{body}</div>}
+                    {body && <div className="text-white">{body}</div>}
                     {footer && <div>{footer}</div>}
                 </DialogHeader>
             </DialogContent>
