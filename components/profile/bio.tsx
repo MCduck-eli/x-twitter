@@ -12,12 +12,12 @@ export default function Bio({ user }: { user: IUser }) {
     return (
         <>
             <EditProfile user={JSON.parse(JSON.stringify(user))} />
-            <div className="flex justify-between px-8 w-full h-auto py-8">
+            <div className="flex justify-between px-8 md:w-full w-110 h-auto py-8">
                 <div className=" flex flex-col">
-                    <span className="font-bold text-3xl text-white  ">
+                    <span className="font-bold md:text-3xl text-white  text-lg ">
                         {user.name}
                     </span>
-                    <div className="text-muted-foreground mb-2">
+                    <div className="text-muted-foreground mb-2 flex md:flex-row flex-col">
                         <span className="mr-2">
                             {user.username || user.email}
                         </span>
@@ -40,9 +40,9 @@ export default function Bio({ user }: { user: IUser }) {
                 </div>
                 <Button
                     onClick={useEditModal.isOpen}
-                    label={"Edit profile"}
+                    label={"Edit"}
                     secondary
-                    classNames="h-14"
+                    classNames="md:h-14 h-12 "
                 />
             </div>
         </>

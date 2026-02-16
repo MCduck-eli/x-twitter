@@ -36,7 +36,7 @@ export default function Sidebar({ user }: { user: IUser }) {
         },
     ];
     return (
-        <div className="w-auto md:w-80 md:pr-8  px-2 md:px-0 py-10 h-screen relative">
+        <div className="w-11 md:w-80 md:pr-8  px-2 md:px-0 py-10 h-screen relative">
             <div className="flex flex-col">
                 <div className="relative md:flex hidden justify-center mb-10 ">
                     <Image
@@ -69,17 +69,17 @@ export default function Sidebar({ user }: { user: IUser }) {
                 </div>
             </div>
             <div className="absolute bottom-70 md:hidden block">
-                <button className="bg-sky-400 p-1 rounded-full text-3xl cursor-pointer">
+                <button className="bg-sky-400 p-1 rounded-full text-2xl cursor-pointer">
                     <FiEdit />
                 </button>
             </div>
             <div className="absolute bottom-5 md:hidden block">
-                <button className="cursor-pointer" onClick={() => signOut()}>
+                <button className="cursor-pointe" onClick={() => signOut()}>
                     <Image
                         src={"/logout.png"}
                         alt="logout"
-                        width={40}
-                        height={40}
+                        width={35}
+                        height={35}
                     />
                 </button>
             </div>

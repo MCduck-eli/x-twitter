@@ -12,10 +12,10 @@ export default function Sidebutton({ user }: { user: IButtons }) {
                 <Button label={user.label} outline />
             </div>
 
-            {/* MOBILE VERSION  */}
+            {/* MOBILE VERSION */}
 
             <div className="md:hidden block text-white">
-                <button className="text-4xl cursor-pointer">{user.icon}</button>
+                <button className="text-3xl cursor-pointer">{user.icon}</button>
             </div>
         </>
     );

@@ -106,7 +106,7 @@ export default function UserItem({ post, setData }: PostProps) {
                                 <span className="flex items-center text-muted-foreground">
                                     {sliceText(post.user.email, 16)}
                                 </span>
-                                <span className="flex items-center text-muted-foreground">
+                                <span className="md:flex items-center text-muted-foreground hidden">
                                     {formatDistanceToNow(
                                         new Date(post.createdAt),
                                     )}{" "}
